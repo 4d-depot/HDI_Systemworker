@@ -1,0 +1,510 @@
+{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onUnload",
+		"onTimer"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "842pt",
+		"paperHeight": "595pt"
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Tab Control": {
+					"type": "tab",
+					"top": 22,
+					"left": 23,
+					"width": 1020,
+					"height": 800,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "_TabTitles",
+					"dataSourceTypeHint": "arrayText",
+					"action": "gotoPage",
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Tab Control.4dm"
+				}
+			}
+		},
+		{
+			"objects": {
+				"information": {
+					"type": "input",
+					"top": 289,
+					"left": 51,
+					"width": 966,
+					"height": 208,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Infos[0].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"information1": {
+					"type": "input",
+					"top": 61,
+					"left": 49,
+					"width": 966,
+					"height": 128,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Infos[1].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Input": {
+					"type": "input",
+					"left": 66,
+					"top": 264,
+					"width": 400,
+					"height": 200,
+					"dataSourceTypeHint": "picture",
+					"pictureFormat": "proportionalCenter",
+					"dataSource": "Form:C1466.picture.original",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none"
+				},
+				"Input1": {
+					"type": "input",
+					"left": 66,
+					"top": 236,
+					"width": 364,
+					"height": 16,
+					"dataSource": "Form:C1466.picture.originalPath",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none"
+				},
+				"Button": {
+					"type": "button",
+					"text": "...",
+					"top": 235,
+					"left": 434,
+					"width": 32,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm"
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Image conversions",
+					"top": 484,
+					"left": 155,
+					"width": 177,
+					"height": 28,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button1.4dm"
+				},
+				"Input2": {
+					"type": "input",
+					"left": 585,
+					"top": 264,
+					"width": 400,
+					"height": 200,
+					"dataSource": "PictureInfo.Identify",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none"
+				},
+				"Rotate90Spinner": {
+					"type": "spinner",
+					"left": 215,
+					"top": 529,
+					"width": 35,
+					"height": 19,
+					"dataSource": "PictureInfo.spinner.Rotate90",
+					"visibility": "hidden"
+				},
+				"Rotate90Text": {
+					"type": "text",
+					"text": "Rotate 90",
+					"top": 531,
+					"left": 44,
+					"width": 172,
+					"height": 15,
+					"textAlign": "right"
+				},
+				"Rotate180Spinner": {
+					"type": "spinner",
+					"left": 215,
+					"top": 554,
+					"width": 35,
+					"height": 19,
+					"dataSource": "PictureInfo.spinner.Rotate180",
+					"visibility": "hidden"
+				},
+				"Rotate180Text": {
+					"type": "text",
+					"text": "Rotate 180",
+					"top": 556,
+					"left": 44,
+					"width": 172,
+					"height": 15,
+					"textAlign": "right"
+				},
+				"Rotate270Spinner": {
+					"type": "spinner",
+					"left": 215,
+					"top": 581,
+					"width": 35,
+					"height": 19,
+					"dataSource": "PictureInfo.spinner.Rotate270",
+					"visibility": "hidden"
+				},
+				"Rotate270Text": {
+					"type": "text",
+					"text": "Rotate 270",
+					"top": 583,
+					"left": 44,
+					"width": 172,
+					"height": 15,
+					"textAlign": "right"
+				},
+				"Resize200x100Spinner": {
+					"type": "spinner",
+					"left": 215,
+					"top": 668,
+					"width": 35,
+					"height": 19,
+					"dataSource": "PictureInfo.spinner.Resize200x100",
+					"visibility": "hidden"
+				},
+				"Resize200x100Text": {
+					"type": "text",
+					"text": "Resize 200x100",
+					"top": 670,
+					"left": 44,
+					"width": 172,
+					"height": 15,
+					"textAlign": "right"
+				},
+				"Resize400x200Spinner": {
+					"type": "spinner",
+					"left": 215,
+					"top": 717,
+					"width": 35,
+					"height": 19,
+					"dataSource": "PictureInfo.spinner.Resize400x200",
+					"visibility": "hidden"
+				},
+				"Resize400x200Text": {
+					"type": "text",
+					"text": "Resize 400x200",
+					"top": 718,
+					"left": 44,
+					"width": 172,
+					"height": 15,
+					"textAlign": "right"
+				},
+				"Button2": {
+					"type": "button",
+					"text": "Picture info",
+					"top": 236,
+					"left": 584,
+					"width": 212,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button2.4dm"
+				},
+				"IdentifySpinner": {
+					"type": "spinner",
+					"left": 802,
+					"top": 235,
+					"width": 35,
+					"height": 19,
+					"dataSource": "PictureInfo.spinner.Identify",
+					"visibility": "hidden"
+				},
+				"Input3": {
+					"type": "input",
+					"left": 385,
+					"top": 484,
+					"width": 600,
+					"height": 300,
+					"dataSourceTypeHint": "picture",
+					"pictureFormat": "proportionalCenter",
+					"dataSource": "Form:C1466.picture.convertedPicture",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none"
+				},
+				"Rotate90Displaying": {
+					"type": "button",
+					"text": "Display",
+					"top": 527,
+					"left": 257,
+					"width": 75,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Rotate90Displaying.4dm",
+					"visibility": "hidden"
+				},
+				"Rotate180Displaying": {
+					"type": "button",
+					"text": "Display",
+					"top": 552,
+					"left": 257,
+					"width": 75,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Rotate180Displaying.4dm",
+					"visibility": "hidden"
+				},
+				"Rotate270Displaying": {
+					"type": "button",
+					"text": "Display",
+					"top": 579,
+					"left": 257,
+					"width": 75,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Rotate270Displaying.4dm",
+					"visibility": "hidden"
+				},
+				"Resize200x100Displaying": {
+					"type": "button",
+					"text": "Display",
+					"top": 666,
+					"left": 257,
+					"width": 75,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Resize200x100Displaying.4dm",
+					"visibility": "hidden"
+				},
+				"Resize400x200Displaying": {
+					"type": "button",
+					"text": "Display",
+					"top": 714,
+					"left": 257,
+					"width": 75,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Resize400x200Displaying.4dm",
+					"visibility": "hidden"
+				},
+				"Trace": {
+					"type": "checkbox",
+					"text": "Trace",
+					"top": 798,
+					"left": 29,
+					"width": 117,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.trace",
+					"sizingY": "move"
+				},
+				"Resize100x50Spinner": {
+					"type": "spinner",
+					"left": 215,
+					"top": 644,
+					"width": 35,
+					"height": 19,
+					"dataSource": "PictureInfo.spinner.Resize100x50",
+					"visibility": "hidden"
+				},
+				"Resize100x50Text": {
+					"type": "text",
+					"text": "Resize 100x50",
+					"top": 646,
+					"left": 44,
+					"width": 172,
+					"height": 15,
+					"textAlign": "right"
+				},
+				"Resize100x50Displaying": {
+					"type": "button",
+					"text": "Display",
+					"top": 642,
+					"left": 257,
+					"width": 75,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Resize100x50Displaying.4dm",
+					"visibility": "hidden"
+				},
+				"Resize300x150Spinner": {
+					"type": "spinner",
+					"left": 215,
+					"top": 694,
+					"width": 35,
+					"height": 19,
+					"dataSource": "PictureInfo.spinner.Resize300x150",
+					"visibility": "hidden"
+				},
+				"Resize300x150Text": {
+					"type": "text",
+					"text": "Resize 300x150",
+					"top": 695,
+					"left": 44,
+					"width": 172,
+					"height": 15,
+					"textAlign": "right"
+				},
+				"Resize300x150Displaying": {
+					"type": "button",
+					"text": "Display",
+					"top": 690,
+					"left": 257,
+					"width": 75,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Resize300x150Displaying.4dm",
+					"visibility": "hidden"
+				},
+				"Resize500x250Spinner": {
+					"type": "spinner",
+					"left": 215,
+					"top": 740,
+					"width": 35,
+					"height": 19,
+					"dataSource": "PictureInfo.spinner.Resize500x250",
+					"visibility": "hidden"
+				},
+				"Resize500x250Text": {
+					"type": "text",
+					"text": "Resize 500x250",
+					"top": 741,
+					"left": 44,
+					"width": 172,
+					"height": 15,
+					"textAlign": "right"
+				},
+				"Resize500x250Displaying": {
+					"type": "button",
+					"text": "Display",
+					"top": 738,
+					"left": 257,
+					"width": 75,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Resize500x250Displaying.4dm",
+					"visibility": "hidden"
+				},
+				"Resize600x300Spinner": {
+					"type": "spinner",
+					"left": 215,
+					"top": 765,
+					"width": 35,
+					"height": 19,
+					"dataSource": "PictureInfo.spinner.Resize600x300",
+					"visibility": "hidden"
+				},
+				"Resize600x300Text": {
+					"type": "text",
+					"text": "Resize 600x300",
+					"top": 766,
+					"left": 44,
+					"width": 172,
+					"height": 15,
+					"textAlign": "right"
+				},
+				"Resize600x300Displaying": {
+					"type": "button",
+					"text": "Display",
+					"top": 762,
+					"left": 257,
+					"width": 75,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Resize600x300Displaying.4dm",
+					"visibility": "hidden"
+				}
+			},
+			"entryOrder": [
+				"information1",
+				"Input",
+				"Input1",
+				"Button",
+				"Button1",
+				"Input2",
+				"Button2",
+				"Input3",
+				"Rotate90Displaying",
+				"Rotate180Displaying",
+				"Rotate270Displaying",
+				"Resize200x100Displaying",
+				"Resize400x200Displaying",
+				"Trace",
+				"Resize100x50Displaying",
+				"Resize300x150Displaying",
+				"Resize500x250Displaying",
+				"Resize600x300Displaying"
+			]
+		}
+	],
+	"geometryStamp": 3169,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}
